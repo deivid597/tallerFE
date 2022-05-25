@@ -15,8 +15,8 @@
                     <th scope="col">Celular</th>
                     <th scope="col">Correo</th>
                     <th [colSpan]="2" class="text-center">
-                        <button class="btn btn-primary btn-sm">
-                            N
+                        <button class="btn btn-primary btn-sm" (click)="onNuevo();">
+                            <fa-icon [icon]="['fas','plus']"></fa-icon>
                         </button>
                     </th>
                   </tr>
@@ -32,12 +32,12 @@
                     <td>david@gmail.com</td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-warning">
-                            E
+                            <fa-icon [icon]="['fas','pencil']"></fa-icon>
                         </button>
                     </td>
                     <td class="text-center">
                         <button class="btn btn-sm btn-danger">
-                            D
+                            <fa-icon [icon]="['fas','trash-can']"></fa-icon>
                         </button>
                     </td>
                   </tr>
@@ -62,8 +62,18 @@
                 </tbody>
               </table>
         </div>
-        <div class="card-body">
-            Botonera
+        <div class="card-footer text-end">
+            <div>
+                <button class="btn btn-sm btn-outline-primary me-2">
+                    <fa-icon [icon]="['fas','filter']"></fa-icon> Filtrar
+                </button>
+                <button class="btn btn-sm btn-outline-success me-2">
+                    <fa-icon [icon]="['fas','print']"></fa-icon> Imprimir
+                </button>
+                <button class="btn btn-sm btn-outline-danger">
+                    <fa-icon [icon]="['fas','power-off']"></fa-icon> Cerrar
+                </button>
+            </div>
         </div>
     </div>
 </div>

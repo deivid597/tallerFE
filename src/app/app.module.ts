@@ -7,6 +7,9 @@ import { ClienteComponent } from './components/cliente/cliente.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ArtefactoComponent } from './components/artefacto/artefacto.component';
 import { HomeComponent } from './components/home/home.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+//import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,15 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor (libreria : FaIconLibrary){
+    libreria.addIconPacks(fas);
+   // libreria.addIcons(faPlus);
+  }
+ }

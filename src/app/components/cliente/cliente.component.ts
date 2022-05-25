@@ -8,8 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class ClienteComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
+//Evento botones CRUD
+  onNuevo() {
+    alert('Creando nuevo');
+  }
+  onEditar() {
+  }
+  onEliminar() {
+  }
+  //Evento botoenes en general
+  onFiltrar() {
+  }
+  onImprimir() {
+  }
+  onCerrar() {
   }
 
+  ngOnInit(): void {
+    
+  }
 }
